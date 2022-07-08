@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES2019",
+        "rootDir": "./services",
+        "esModuleInterop": true,        
+    },
+    "include": [
+        "services",
+    ]
+}
