@@ -20,6 +20,10 @@ const config: Configuration = {
             }
         ]
     },
+    externals: {
+        // do not bundle this as this is huge and already provided by AWS.
+        'aws-sdk': 'aws-sdk'
+    },
     resolve: {
         extensions: ['.ts', '.js']
     },

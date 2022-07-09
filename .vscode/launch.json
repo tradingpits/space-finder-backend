@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    // "configurations": [
+    //   {
+    //     "name": "CDK Debug",
+    //     "type": "node",
+    //     "request": "launch",        
+    //     "skipFiles": ["<node_internals>/**"],
+    //     "runtimeArgs": ["-r", "./node_modules/ts-node/register/transpile-only"],
+    //     // Entry point of your stack
+    //     //"args": ["/Users/ervin/.nvm/versions/node/v16.13.1/bin/cdk", "-c", "config=cicd", "synth"],
+    //     "args": ["/Users/ervin/workspace/tradingpits.com/CLOUDFORMATION_DEPLOYMENT_POC/space-finder-backend/services/node-lambda/hello.ts"],
+    //     "runtimeExecutable": "/Users/ervin/.nvm/versions/node/v16.13.1/bin/node"
+    //   }
+    // ]
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug local file",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "args": [
+                "${relativeFile}"
+            ],
+            "env": {
+                "AWS_REGION":"us-east-2",
+                "TABLE_NAME": "SpacesTable",
+                "PRIMARY_KEY": "spaceId"
+            },
+            "runtimeExecutable": "/Users/ervin/.nvm/versions/node/v16.13.1/bin/node"
+        }
+    ]
+  }
